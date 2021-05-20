@@ -7,13 +7,13 @@ import retrofit2.converter.gson.GsonConverterFactory
 // Client API object. For making this we need to make all the end points first. So, make WeatherApiService interface first.
 object WeatherApiClient {
 
-    // create an object of retrofit
+    // create an object of retrofit. Make sure to make it private because we want to access retrofitService
     private val retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    val retrofitService: WeatherApiService by lazy{
+    val retrofitService: WeatherApiService by lazy {
         retrofit.create(WeatherApiService::class.java)
     }
 }
