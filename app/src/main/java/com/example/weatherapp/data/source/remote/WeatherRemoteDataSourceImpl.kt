@@ -40,7 +40,7 @@ class WeatherRemoteDataSourceImpl(
         withContext(ioDispatcher) {
             return@withContext try {
                 val result = retrofitClient.getWeatherForecast(
-                    cityId, "abc"
+                    cityId, BuildConfig.API_KEY
                 )
                 if (result.isSuccessful) {
                     val networkWeatherForecast = result.body()?.weathers
@@ -57,7 +57,7 @@ class WeatherRemoteDataSourceImpl(
         withContext(ioDispatcher) {
             return@withContext try {
                 val result = retrofitClient.getSpecificWeather(
-                    query, "abc"
+                    query, BuildConfig.API_KEY
                 )
                 if (result.isSuccessful) {
                     val networkWeather = result.body()
