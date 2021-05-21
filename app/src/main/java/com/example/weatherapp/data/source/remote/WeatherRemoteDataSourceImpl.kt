@@ -13,6 +13,7 @@ import kotlinx.coroutines.withContext
 import java.lang.Exception
 
 class WeatherRemoteDataSourceImpl(
+    // This class needs to have the following two as default
     private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO,//Whenever you deal with networking
     // you need to work with asynchronous programming. In kotlin we use coroutines for that.
     // And for networking & database access, we use dispatchers.IO.
