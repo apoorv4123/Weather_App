@@ -1,5 +1,6 @@
 package com.example.weatherapp.data.source.remote
 
+import com.example.weatherapp.BuildConfig
 import com.example.weatherapp.data.model.LocationModel
 import com.example.weatherapp.data.model.NetworkWeather
 import com.example.weatherapp.data.model.NetworkWeatherForecast
@@ -22,7 +23,7 @@ class WeatherRemoteDataSourceImpl(
         withContext(ioDispatcher) {
             return@withContext try {
                 val result = retrofitClient.getCurrentWeather(
-                    locationModel.latitude, locationModel.longitude, "abc"
+                    locationModel.latitude, locationModel.longitude, BuildConfig.API_KEY
                 )
                 if (result.isSuccessful) {
                     val networkWeather = result.body()

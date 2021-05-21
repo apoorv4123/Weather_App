@@ -5,6 +5,10 @@ plugins {
     id 'kotlin-kapt'
 }
 
+def apikeyFile = rootProject.file("apikey.properties")
+def apikeyProperties = new Properties()
+apikeyProperties.load(new FileInputStream(apikeyFile))
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
@@ -15,7 +19,7 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
+        buildConfigField("String", "API_KEY", apikeyProperties['API_KEY'])
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -63,7 +67,7 @@ dependencies {
     implementation "com.google.android.material:material:$materialVersion"
 
     //Lifecycle Extensions
-    implementation "android.arch.lifecycle:extensions:$lifeCycleExtensionVersion"
+//    implementation "android.arch.lifecycle:extensions:$lifeCycleExtensionVersion"
 
     //Room
     implementation "androidx.room:room-runtime:$roomVersion"
