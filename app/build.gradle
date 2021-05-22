@@ -67,7 +67,7 @@ dependencies {
     implementation "com.google.android.material:material:$materialVersion"
 
     //Lifecycle Extensions
-//    implementation "android.arch.lifecycle:extensions:$lifeCycleExtensionVersion"
+    implementation "android.arch.lifecycle:extensions:$lifeCycleExtensionVersion"
 
     //Room
     implementation "androidx.room:room-runtime:$roomVersion"
@@ -95,14 +95,14 @@ dependencies {
     implementation "com.google.android.gms:play-services-location:$googlePlayLocation"
 
     //VegaLayoutManager
-//    implementation "com.stone.vega.library:VegaLayoutManager:$vega_version"
+    implementation "com.stone.vega.library:VegaLayoutManager:$vega_version"
 
     //Lifecycle KTX
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 
     //Algolia Search
-//    implementation "com.algolia:instantsearch-android:$algolia_version"
+    implementation "com.algolia:instantsearch-android:$algolia_version"
 
     //Paging Library
     implementation "androidx.paging:paging-runtime-ktx:$paging_version"

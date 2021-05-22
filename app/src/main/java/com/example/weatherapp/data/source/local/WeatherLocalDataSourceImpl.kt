@@ -10,8 +10,8 @@ import kotlinx.coroutines.withContext
 class WeatherLocalDataSourceImpl(
     // This class needs to have the following two as default, just like remote dataSource implementation. We
     // won't need retrofitClient object here. Instead, we'll need weather dao
-    private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO,
-    private val weatherDao: WeatherDao
+    private val weatherDao: WeatherDao,
+    private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
 ) : WeatherLocalDataSource {
     override suspend fun getWeather(): DBWeather? = withContext(ioDispatcher) {
         return@withContext weatherDao.getWeather()
