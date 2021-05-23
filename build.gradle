@@ -41,7 +41,7 @@ ext {
     timberVersion = '4.7.1'
     vega_version = '1.0.6'
     lifecycle_version = '2.3.1'
-    algolia_version = '2.4.0'
+    algolia_version = '2.11.0-beta01'
     paging_version = '3.0.0'
     elastic_version = '2.0.7'
     work_version = '2.6.0-alpha02'

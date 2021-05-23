@@ -53,21 +53,17 @@ android {
 }
 
 dependencies {
-
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.core:core-ktx:1.5.0'
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
+
+    //Lifecycle KTX
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 
     //Material Design
     implementation "com.google.android.material:material:$materialVersion"
-
-    //Lifecycle Extensions
-    implementation "android.arch.lifecycle:extensions:$lifeCycleExtensionVersion"
 
     //Room
     implementation "androidx.room:room-runtime:$roomVersion"
@@ -95,11 +91,7 @@ dependencies {
     implementation "com.google.android.gms:play-services-location:$googlePlayLocation"
 
     //VegaLayoutManager
-    implementation "com.stone.vega.library:VegaLayoutManager:$vega_version"
-
-    //Lifecycle KTX
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+//    implementation 'com.stone.vega.library:VegaLayoutManager:1.0.6'
 
     //Algolia Search
     implementation "com.algolia:instantsearch-android:$algolia_version"
@@ -115,4 +107,6 @@ dependencies {
 
     implementation 'com.google.code.gson:gson:2.8.6'
 
+    // RollingLayoutManager
+    implementation "com.github.VRGsoftUA:RollingLayoutManager:1.0"
 }
