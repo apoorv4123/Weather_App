@@ -8,6 +8,7 @@ import com.example.weatherapp.ui.home.HomeFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
     private val homeFragment = HomeFragment()
     private val fragmentManager = supportFragmentManager
     private var activeFragment: Fragment = homeFragment

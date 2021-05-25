@@ -21,7 +21,6 @@ class HomeViewModel(
     private val repository: WeatherRepository,
     application: Application
 ) : ViewModel() {
-
     private val locationLiveData = LocationLiveData(application)
 
     init {
@@ -90,8 +89,7 @@ class HomeViewModel(
                     _isLoading.value = false
                     if (result.data != null) {
                         val weather = result.data.apply {
-                            this.networkWeatherCondition.temp =
-                                convertKelvinToCelsius(this.networkWeatherCondition.temp)
+                            this.networkWeatherCondition.temp = convertKelvinToCelsius(this.networkWeatherCondition.temp)
                         }
                         _dataFetchState.value = true
                         _weather.value = weather

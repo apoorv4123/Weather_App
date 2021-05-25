@@ -45,7 +45,6 @@ class HomeFragment : Fragment() {
             }
         })
     }
-
     override fun onStart() {
         super.onStart()
         invokeLocationAction()
@@ -97,7 +96,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        homeView = inflater.inflate(R.layout.home_fragment, container, false)
+        homeView =  inflater.inflate(R.layout.home_fragment, container, false)
         return view;
     }
 
